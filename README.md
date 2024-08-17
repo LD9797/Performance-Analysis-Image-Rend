@@ -1,4 +1,4 @@
-# Project 2 - Performance Analysis for Image Rendering on different Operating Systems
+# Performance Analysis for Image Rendering on different Operating Systems
 
 This investigation aims to compare statistically the
 image rendering performance using PBRT V3 (Physically Based
