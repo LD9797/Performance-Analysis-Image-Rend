@@ -1,0 +1,29 @@
+Instructions to install and compile PBRT in Ubuntu:
+-Follow the Instructions in here: https://github.com/mmp/pbrt-v3#building-pbrt
+-sudo apt-get install build-essential libssl-dev
+-Download the sample scenes from: https://pbrt.org/scenes-v3
+-Change in the pbrt file the accelerator, it should be either:
+--Accelerator "kdtree"
+--or
+--Accelerator "bhv" #this is the default one, so if it is not specified then this is used.
+
+-Compile a scene: 
+sudo ./pbrt --outfile test.png /home/juan/Documents/P2/pbrt-v3/scenes/killeroo-simple.pbrt --logdir logs
+
+
+
+Instructions to install and compile PBRT in Windows:
+-Install VisualStudio Community
+-Follow Instructions on github
+-Run the command in PS
+
+$filename="sssdragon_bhv_path"
+$outfile="sssdragon_bhv_path.png"
+
+$filename >> time.log 
+$filename >> pbrt.log 
+Get-Date >> time.log 
+Get-Date >> pbrt.log 
+Measure-Command {.\pbrt.exe --outfile $outfile C:\Users\jcord\Downloads\pbrtTests\pbrt-v3\scenes\killeroo-simple.pbrt  >> pbrt.log } >> time.log
+
+Outputs will be saved on time.log and pbrt output in pbrt.log
